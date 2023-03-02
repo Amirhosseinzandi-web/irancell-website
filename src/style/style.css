@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ************************************************ */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/* ************************* */
+@layer base{
+    body{
+        font-family: 'Vazirmatn', sans-serif;
+    }
+}
+.bg-yellow{
+    background-color: #FFCC00;
+}
+.self-yellow{
+    color: #FFCC00;
+}
+.nav-left i{
+    font-size: 20px;
+}
+.nav-left li{
+    cursor: pointer;
+}
+.menu-open{
+    height: 0;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+.menu-open li:first-child{
+    border: 1px solid rgba(255, 255, 255, 0.24);
+}
+.account-desktop{
+    background: #000000;
+    top: 20px;
+    left: -26px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: none !important;
+}
+.account-desktop:hover{
+    visibility: visible;
+    display: block;
+}
+.account-desktop>li{
+    width: 210px;
+}
+.account-desktop>li:hover{
+    background-color: rgba(255, 255, 255, 0.329);
+}
+.account-desktop>li:first-child{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.24);;
+}
