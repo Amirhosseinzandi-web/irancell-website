@@ -17,22 +17,7 @@ function NavLeft() {
             }
         }
     }
-    // const AddAcoountMouseIn = () => {
-    //     let mq = window.matchMedia("(min-width:1024px)")
-    //     if (mq.matches) {
-    //         const _height = document.querySelector(".menu-open").scrollHeight
-    //         document.querySelector(".account>span:nth-of-type(2)").style.transform = ` rotate(180deg) `
-    //         document.querySelector(".menu-open").style.height = `${_height}px`
-    //     }
-    // }
-    // const RemoveAddAccount = () => {
-    //     const mq = window.matchMedia("(min-width:1024px)")
-    //     if (mq.matches) {
-    //         document.querySelector(".account>span:nth-of-type(2)").style.transform = ` unset `
-    //         document.querySelector(".menu-open").style.height = `0px`
-    //     }
-    // }
-
+  
     return (
         <div className='nav-left w-full lg:w-[20%]'>
             <section className='flex p-3  lg:flex-col lg:p-3 lg:pl-6'>
