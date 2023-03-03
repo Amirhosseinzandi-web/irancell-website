@@ -88,6 +88,7 @@
 .hamburger-menu{
     font-size: 30px;
     cursor: pointer;
+    user-select: none;
 }
 .submenu-container{
     transition: 0.4s ease;
@@ -95,14 +96,10 @@
     -moz-transition: 0.4s ease;
     -ms-transition: 0.4s ease;
     -o-transition: 0.4s ease;
+    position: relative;
 }
 .submenu{
     background-color: #1D1D1D;
-    transition: 1s;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -ms-transition: 1s;
-    -o-transition: 1s;
 }
 .submenu li{
     border-bottom: 1px solid rgba(255, 255, 255, 0.459);
@@ -115,11 +112,15 @@
     font-weight: bold;
     padding: 8px;
 }
-.submenu-height{
-    height: 0;
-    transition: 1s linear;
-    -webkit-transition: 1s linear;
-    -moz-transition: 1s linear;
-    -ms-transition: 1s linear;
-    -o-transition: 1s linear;
+.submenu-one{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
 }

@@ -5,10 +5,13 @@ import { MyContext } from './Context'
 
 function NavRight() {
   const {menuHamburger , setMenuHamburger} = useContext(MyContext)
+  const {menuHeight , setMenuHeight} = useContext(MyContext)
 
   const MenuHam = () =>{
     setMenuHamburger(!menuHamburger)
+    setMenuHeight(document.querySelector(".submenu-container").scrollHeight)
   }
+  
 
   return (
     <div className='nav-right bg-yellow w-full lg:w-[80%] p-4 flex items-center'>
@@ -25,7 +28,7 @@ function NavRight() {
               </div>
             </div>
             <div className='w-[40%] border flex items-center justify-end'>
-              <i onClick={MenuHam} className={menuHamburger?(`bi bi-x-lg hamburger-menu`):(`bi bi-justify hamburger-menu`)}></i>
+              <i onClick={MenuHam} className={menuHamburger?(`bi bi-x-lg hamburger-menu transition`):(`bi bi-justify hamburger-menu transition`)}></i>
             </div>
         </section>
     </div>
