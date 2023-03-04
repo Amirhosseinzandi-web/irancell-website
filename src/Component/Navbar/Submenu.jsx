@@ -19,14 +19,18 @@ function Submenu() {
 
     document.querySelectorAll(".submenu>li").forEach((self) => {
         self.addEventListener("click", () => {
-            setMenuHeight(self.parentElement.scrollHeight)
-            console.log(menuHeight)
+            let arr = []
             let LiAttr = self.getAttribute("data-information")
             document.querySelectorAll(".submenu-container>ul").forEach((_ul) => {
                 if (_ul.getAttribute("data-information")) {
                     let UlAttr = _ul.getAttribute("data-information")
                     if (LiAttr === UlAttr) {
                         _ul.style.left = "0px"
+                        _ul.childNodes.forEach((para) => {
+                            arr.push(para.offsetHeight)
+                        })
+                        let temp = arr.reduce((total, value) => total + value)
+                        setMenuHeight(temp)
                     }
                 }
             })
@@ -36,9 +40,25 @@ function Submenu() {
 
     document.querySelectorAll(".submenu-container li[type='back']").forEach((_back) => {
         _back.addEventListener("click", () => {
-            _back.parentElement.style.left = "-100%"
+            const arr = []
+            _back.parentElement.style.left = "-100%";
+           const _backParentAttr = _back.parentElement.getAttribute("data-information");
+            document.querySelectorAll(".submenu-container li").forEach((_li)=>{
+               const _liAttr = _li.getAttribute("data-information")
+                if(_backParentAttr===_liAttr){
+                    const liParent = _li.parentElement;
+                    liParent.childNodes.forEach((para)=>{
+                        const _height = para.offsetHeight;
+                        arr.push(_height)
+                    })
+                }
+            })
+            const temp = arr.reduce((total,value)=>total+value)
+            setMenuHeight(temp)
+           
         })
     })
+
 
     return (
         <div style={menuHamburger ? (openHeight) : (closeHeight)} className={menuHamburger ? (`submenu-container overflow-hidden`) : (`submenu-container overflow-hidden submenu-height`)}>
@@ -79,7 +99,7 @@ function Submenu() {
                 <li data-information="package-purchase">
                     <NavLink className="flex justify-between items-center"><i className="bi bi-arrow-left inline-flex"></i>خرید بسته</NavLink>
                 </li>
-                <li>
+                <li data-information="products">
                     <NavLink className="flex justify-between items-center"><i className="bi bi-arrow-left inline-flex"></i>دستگاه ها</NavLink>
                 </li>
                 <li>
@@ -98,7 +118,7 @@ function Submenu() {
 
             <ul className='submenu submenu-one' data-information="buy-simcard">
                 <li type="back">
-                <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
+                    <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
                 </li>
                 <li>
                     <NavLink className="flex justify-end">جستجوی سریع شماره سیم کارت</NavLink>
@@ -122,10 +142,41 @@ function Submenu() {
                     <NavLink>دریافت شارژ یا اینترنت اضطراری</NavLink>
                 </li>
             </ul>
-            
+
             <ul className='submenu submenu-one' data-information="package-purchase">
                 <li type="back">
-                <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
+                    <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end"><span className="mx-1">4g</span>بسته اینترنت همراه</NavLink>
+                </li>
+                <li className='yes'>
+                    <NavLink className="flex justify-end">بسته اینترنت ثابت TDLTE</NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">بسته اینترنت رومینگ</NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">بسته های اختصاصی</NavLink>
+                </li>
+                <li className='flex justify-end'>
+                    <NavLink>بسته فعالسازی مجدد مودم TDLTE</NavLink>
+                </li>
+                <li className='flex justify-end'>
+                    <NavLink>بسته مکالمه</NavLink>
+                </li>
+                <li className='flex justify-end'>
+                    <NavLink>بسته های ترکیبی</NavLink>
+                </li>
+                <li className='flex justify-end'>
+                    <NavLink>بسته بوم و بوم+</NavLink>
+                </li>
+            </ul>
+
+
+            <ul className='submenu submenu-one' data-information="products">
+                <li type="back">
+                    <NavLink className="flex justify-between items-center">خرید مودم<i className="bi bi-arrow-right inline-flex"></i></NavLink>
                 </li>
                 <li>
                     <NavLink className="flex justify-end"><span className="mx-1">4g</span>بسته اینترنت همراه</NavLink>

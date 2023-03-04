@@ -14,7 +14,7 @@ function NavRight() {
   
 
   return (
-    <div className='nav-right bg-yellow w-full lg:w-[80%] p-4 flex items-center'>
+    <div className='nav-right bg-yellow w-full lg:w-[80%] p-3 flex items-center'>
         <section className='flex flex-wrap w-full'>
             <div className='w-[60%] flex'>
               <div className='w-[50%]'>
