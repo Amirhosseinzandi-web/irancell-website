@@ -16,7 +16,7 @@ function NavRight() {
   return (
     <div className='nav-right bg-yellow w-full lg:w-[80%] p-4 flex items-center'>
         <section className='flex flex-wrap w-full'>
-            <div className='w-[60%] border flex'>
+            <div className='w-[60%] flex'>
               <div className='w-[50%]'>
                 <figure><img src={Logo} alt="" /></figure>
               </div>
@@ -27,7 +27,7 @@ function NavRight() {
                 </form>
               </div>
             </div>
-            <div className='w-[40%] border flex items-center justify-end'>
+            <div className='w-[40%] flex items-center justify-end'>
               <i onClick={MenuHam} className={menuHamburger?(`bi bi-x-lg hamburger-menu transition`):(`bi bi-justify hamburger-menu transition`)}></i>
             </div>
         </section>

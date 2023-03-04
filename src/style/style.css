@@ -103,14 +103,12 @@
 }
 .submenu li{
     border-bottom: 1px solid rgba(255, 255, 255, 0.459);
-    display: flex;
-    justify-content: end
 }
 .submenu li>a{
     color: white;
     font-size: 19px;
     font-weight: bold;
-    padding: 8px;
+    padding: 9px;
 }
 .submenu-one{
     position: absolute;
