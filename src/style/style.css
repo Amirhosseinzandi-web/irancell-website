@@ -101,7 +101,7 @@
 .submenu{
     background-color: #1D1D1D;
 }
-.submenu li{
+.submenu li:not(:last-child){
     border-bottom: 1px solid rgba(255, 255, 255, 0.459);
 }
 .submenu li>a{

@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function NavLeft() {
-    const [account, setAccount] = useState(true)
+    const [account, setAccount] = useState(false)
 
     const AddAcoount = () => {
-        setAccount(!account)
+        setAccount(!account)   
+    }
+
+    useEffect(()=>{
         const mq = window.matchMedia("(max-width:1024px)")
         if (mq.matches) {
             const _height = document.querySelector(".menu-open").scrollHeight
@@ -16,7 +19,7 @@ function NavLeft() {
                 document.querySelector(".menu-open").style.height = `0px`
             }
         }
-    }
+    },[account])
   
     return (
         <div className='nav-left w-full lg:w-[20%]'>
