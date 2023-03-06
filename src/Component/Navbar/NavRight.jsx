@@ -1,21 +1,46 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import Logo from "../../img/logo.png"
 import { MyContext } from './Context'
+import DesktopMenu from './DesktopMenu'
 
 
 function NavRight() {
   const {menuHamburger , setMenuHamburger} = useContext(MyContext)
   const {menuHeight , setMenuHeight} = useContext(MyContext)
 
+
+
   const MenuHam = () =>{
     setMenuHamburger(!menuHamburger)
-    setMenuHeight(document.querySelector(".submenu-container").scrollHeight)
+    const arr=[]
+    document.querySelectorAll(".submenu-container .come-in").forEach((el)=>{
+      el.childNodes.forEach((para)=>{
+        const _height = para.offsetHeight;
+        arr.push(_height)
+      })
+    })
+    if(arr.length !==0){
+      const temp = arr.reduce((total,value)=>total+value)
+      setMenuHeight(temp)
+    }
+    
+    // *****************
+
+
+   
+
+
+
+
+
+
+    // **************
   }
-  
+
 
   return (
-    <div className='nav-right bg-yellow w-full lg:w-[80%] p-3 flex items-center'>
-        <section className='flex flex-wrap w-full'>
+    <div className='nav-right bg-yellow w-full lg:w-[85%] p-3 flex items-center'>
+        <section className='flex flex-wrap w-full lg:hidden'>
             <div className='w-[60%] flex'>
               <div className='w-[50%]'>
                 <figure><img src={Logo} alt="" /></figure>
@@ -31,6 +56,7 @@ function NavRight() {
               <i onClick={MenuHam} className={menuHamburger?(`bi bi-x-lg hamburger-menu transition`):(`bi bi-justify hamburger-menu transition`)}></i>
             </div>
         </section>
+        <DesktopMenu/>
     </div>
   )
 }

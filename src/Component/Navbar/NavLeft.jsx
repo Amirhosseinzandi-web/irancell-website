@@ -22,7 +22,7 @@ function NavLeft() {
     },[account])
   
     return (
-        <div className='nav-left w-full lg:w-[20%]'>
+        <div className='nav-left w-full lg:w-[15%]'>
             <section className='flex p-3  lg:flex-col lg:p-3 lg:pl-6'>
                 <div className='nav-left-icons self-yellow w-[50%] flex end lg:order-1 lg:w-auto lg:mt-5'>
                     <ul className='w-full flex'>

@@ -10,7 +10,7 @@ function Submenu() {
     const { menuHeight, setMenuHeight } = useContext(MyContext)
 
     const openHeight = {
-        height: menuHeight + "px",
+        height: menuHeight + "px"
     }
 
     const closeHeight = {
@@ -18,11 +18,11 @@ function Submenu() {
     }
 
     document.querySelectorAll(".submenu>li").forEach((self) => {
-        self.addEventListener("click", () => {
-            let arr = []
-            let LiAttr = self.getAttribute("data-information")
-            document.querySelectorAll(".submenu-container>ul").forEach((_ul) => {
-                if (_ul.getAttribute("data-information")) {
+        self.addEventListener("click", (e) => {
+            if (self.getAttribute("data-information")) {
+                let arr = []
+                let LiAttr = self.getAttribute("data-information")
+                document.querySelectorAll(".submenu-container ul").forEach((_ul) => {
                     let UlAttr = _ul.getAttribute("data-information")
                     if (LiAttr === UlAttr) {
                         _ul.style.left = "0px"
@@ -32,8 +32,18 @@ function Submenu() {
                         let temp = arr.reduce((total, value) => total + value)
                         setMenuHeight(temp)
                     }
-                }
-            })
+                    _ul.classList.remove("come-in")
+                    if (_ul.getAttribute("style") === "left: 0px;") {
+                        document.querySelectorAll(".submenu-container ul").forEach((ali) => {
+                            ali.classList.remove("come-in")
+                        })
+                        _ul.classList.add("come-in")
+                    }
+
+                })
+
+            }
+
         })
     })
 
@@ -41,32 +51,50 @@ function Submenu() {
     document.querySelectorAll(".submenu-container li[type='back']").forEach((_back) => {
         _back.addEventListener("click", () => {
             const arr = []
-            _back.parentElement.style.left = "-100%";
-           const _backParentAttr = _back.parentElement.getAttribute("data-information");
-            document.querySelectorAll(".submenu-container li").forEach((_li)=>{
-               const _liAttr = _li.getAttribute("data-information")
-                if(_backParentAttr===_liAttr){
+
+            // *******************************
+            document.querySelectorAll(".submenu-container ul").forEach((pop) => {
+
+                pop.classList.remove("come-in")
+
+                if (pop.getAttribute("style") === "left: 0px;") {
+                    document.querySelectorAll(".submenu-container ul").forEach((teh) => {
+                        if (teh.getAttribute("style") === "left: 0px;") {
+                            pop.classList.remove("come-in")
+                        }
+                    })
+                    pop.classList.add("come-in")
+                }
+            })
+            _back.parentElement.classList.remove("come-in")
+
+            // ***************************************
+            _back.parentElement.style.left = "-100%"
+            const _backParentAttr = _back.parentElement.getAttribute("data-information");
+            document.querySelectorAll(".submenu-container li").forEach((_li) => {
+                const _liAttr = _li.getAttribute("data-information")
+                if (_backParentAttr === _liAttr) {
                     const liParent = _li.parentElement;
-                    liParent.childNodes.forEach((para)=>{
+                    liParent.childNodes.forEach((para) => {
                         const _height = para.offsetHeight;
                         arr.push(_height)
                     })
                 }
             })
-            const temp = arr.reduce((total,value)=>total+value)
+            const temp = arr.reduce((total, value) => total + value)
             setMenuHeight(temp)
-           
+
         })
     })
 
 
     return (
-        <div style={menuHamburger ? (openHeight) : (closeHeight)} className={menuHamburger ? (`submenu-container overflow-hidden`) : (`submenu-container overflow-hidden submenu-height`)}>
-            <ul className="submenu">
+        <div style={menuHamburger ? (openHeight) : (closeHeight)} className="submenu-container overflow-hidden lg:hidden">
+            <ul className="submenu come-in">
                 <li data-information="shop">
                     <NavLink className='flex justify-between items-center'><i className="bi bi-arrow-left inline-flex"></i>فروشگاه</NavLink>
                 </li>
-                <li>
+                <li data-information="products-and-services">
                     <NavLink className="flex justify-between items-center"><i className="bi bi-arrow-left inline-flex"></i>محصول و خدمات</NavLink>
                 </li>
                 <li>
@@ -87,6 +115,9 @@ function Submenu() {
                 <li className='flex justify-end'>
                     <NavLink>ترابرد به ایرانسل</NavLink>
                 </li>
+                <li className='flex justify-end'>
+                    <NavLink> تست </NavLink>
+                </li>
             </ul>
 
             <ul className='submenu submenu-one' data-information="shop">
@@ -102,7 +133,7 @@ function Submenu() {
                 <li data-information="products">
                     <NavLink className="flex justify-between items-center"><i className="bi bi-arrow-left inline-flex"></i>دستگاه ها</NavLink>
                 </li>
-                <li>
+                <li data-information="rand-numbers-auction">
                     <NavLink className="flex justify-between items-center"><i className="bi bi-arrow-left inline-flex"></i>حراج شماره های رند</NavLink>
                 </li>
                 <li className='flex justify-end'>
@@ -150,7 +181,7 @@ function Submenu() {
                 <li>
                     <NavLink className="flex justify-end"><span className="mx-1">4g</span>بسته اینترنت همراه</NavLink>
                 </li>
-                <li className='yes'>
+                <li>
                     <NavLink className="flex justify-end">بسته اینترنت ثابت TDLTE</NavLink>
                 </li>
                 <li>
@@ -176,31 +207,48 @@ function Submenu() {
 
             <ul className='submenu submenu-one' data-information="products">
                 <li type="back">
-                    <NavLink className="flex justify-between items-center">خرید مودم<i className="bi bi-arrow-right inline-flex"></i></NavLink>
+                    <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
                 </li>
                 <li>
-                    <NavLink className="flex justify-end"><span className="mx-1">4g</span>بسته اینترنت همراه</NavLink>
+                    <NavLink className="flex justify-end">خرید مودم+ سیم کارت</NavLink>
                 </li>
                 <li>
-                    <NavLink className="flex justify-end">بسته اینترنت ثابت TDLTE</NavLink>
+                    <NavLink className="flex justify-end">خرید گوشی</NavLink>
                 </li>
                 <li>
-                    <NavLink className="flex justify-end">بسته اینترنت رومینگ</NavLink>
+                    <NavLink className="flex justify-end">خرید تجهیزات خانه هوشمند</NavLink>
+                </li>
+            </ul>
+
+
+            <ul className='submenu submenu-one' data-information="rand-numbers-auction">
+                <li type="back">
+                    <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
                 </li>
                 <li>
-                    <NavLink className="flex justify-end">بسته های اختصاصی</NavLink>
+                    <NavLink className="flex justify-end">پرتال حراج شماره های رند</NavLink>
                 </li>
-                <li className='flex justify-end'>
-                    <NavLink>بسته فعالسازی مجدد مودم TDLTE</NavLink>
+                <li>
+                    <NavLink className="flex justify-end">باشگاه مشتریان شماره های رند</NavLink>
                 </li>
-                <li className='flex justify-end'>
-                    <NavLink>بسته مکالمه</NavLink>
+                <li>
+                    <NavLink className="flex justify-end">خرید تجهیزات خانه هوشمند</NavLink>
                 </li>
-                <li className='flex justify-end'>
-                    <NavLink>بسته های ترکیبی</NavLink>
+            </ul>
+
+
+            <ul className='submenu submenu-one' data-information="products-and-services">
+                <li type="back">
+                    <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
                 </li>
-                <li className='flex justify-end'>
-                    <NavLink>بسته بوم و بوم+</NavLink>
+                <li>
+                    <NavLink className="flex justify-end">خدمات سیم کارت</NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">باشگاه مشتریان شماره های رند</NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">خرید تجهیزات خانه هوشمند</NavLink>
                 </li>
             </ul>
         </div>
