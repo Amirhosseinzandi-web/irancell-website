@@ -10,6 +10,14 @@
         font-family: 'Vazirmatn', sans-serif;
     }
 }
+ul{
+    list-style: none;
+}
+a{
+    color : inherit;
+    text-decoration: none;
+}
+
 .bg-yellow{
     background-color: #FFCC00;
 }
@@ -128,10 +136,65 @@
     cursor: auto;
 }
 
-.yes{
-    overflow-y: scroll;
-}
 .desktop-menu{
     font-size: 15px;
     font-weight: 600;
+}
+.desktop-menu>li>a{
+    display: flex;
+    padding: 10px 0;
+    /* background-color: red; */
+}
+.desktop-menu>li>a>i{
+    display: inline-flex;
+    /* background-color: red; */
+}
+
+.desktop-submenu,
+.desktop-submenu-one{
+    position: relative;
+}
+.desktop-submenu-items,
+.desktop-submenu-items-one{
+    position: absolute;
+    top: 39px;
+    right: 0;
+    background-color: #1D1D1D;
+    border-radius: 8px;
+    display: none;
+}
+.desktop-submenu-items > ul>li:not(last-child),
+.desktop-submenu-items-one > ul>li:not(last-child){
+    border-bottom: 1px solid white;
+    min-width: 250px;
+}
+.desktop-submenu-items > ul>li>a,
+.desktop-submenu-items-one > ul>li>a{
+    display: flex;
+    color: white;
+    padding: 12px;
+    text-align: right;
+    word-break: break-all;
+}
+.desktop-submenu-items > ul>li>a>i,
+.desktop-submenu-items-one > ul>li>a>i{
+    display: inline-flex;
+}
+.desktop-submenu:hover .desktop-submenu-items,
+.desktop-submenu-one:hover .desktop-submenu-items-one{
+    display: block;
+}
+.desktop-submenu-items:hover,
+.desktop-submenu-items-one:hover{
+    display: block;
+    visibility: visible;
+}
+.desktop-submenu-items>ul>li:hover,
+.desktop-submenu-items-one>ul>li:hover{
+    background-color: rgba(255, 255, 255, 0.329);
+}
+.desktop-submenu-items-one{
+    top: 10px;
+    right: 100%;
+    display: none;
 }

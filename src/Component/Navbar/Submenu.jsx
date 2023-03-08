@@ -39,11 +39,8 @@ function Submenu() {
                         })
                         _ul.classList.add("come-in")
                     }
-
                 })
-
             }
-
         })
     })
 
@@ -51,23 +48,19 @@ function Submenu() {
     document.querySelectorAll(".submenu-container li[type='back']").forEach((_back) => {
         _back.addEventListener("click", () => {
             const arr = []
-
             // *******************************
             document.querySelectorAll(".submenu-container ul").forEach((pop) => {
-
                 pop.classList.remove("come-in")
-
                 if (pop.getAttribute("style") === "left: 0px;") {
                     document.querySelectorAll(".submenu-container ul").forEach((teh) => {
                         if (teh.getAttribute("style") === "left: 0px;") {
-                            pop.classList.remove("come-in")
+                            teh.classList.remove("come-in")
                         }
                     })
                     pop.classList.add("come-in")
                 }
             })
             _back.parentElement.classList.remove("come-in")
-
             // ***************************************
             _back.parentElement.style.left = "-100%"
             const _backParentAttr = _back.parentElement.getAttribute("data-information");
@@ -83,14 +76,13 @@ function Submenu() {
             })
             const temp = arr.reduce((total, value) => total + value)
             setMenuHeight(temp)
-
         })
     })
 
 
     return (
         <div style={menuHamburger ? (openHeight) : (closeHeight)} className="submenu-container overflow-hidden lg:hidden">
-            <ul className="submenu come-in">
+            <ul className="submenu come-in main-menu">
                 <li data-information="shop">
                     <NavLink className='flex justify-between items-center'><i className="bi bi-arrow-left inline-flex"></i>فروشگاه</NavLink>
                 </li>
@@ -114,9 +106,6 @@ function Submenu() {
                 </li>
                 <li className='flex justify-end'>
                     <NavLink>ترابرد به ایرانسل</NavLink>
-                </li>
-                <li className='flex justify-end'>
-                    <NavLink> تست </NavLink>
                 </li>
             </ul>
 
@@ -241,7 +230,7 @@ function Submenu() {
                 <li type="back">
                     <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
                 </li>
-                <li>
+                <li data-information="simcard-services">
                     <NavLink className="flex justify-end">خدمات سیم کارت</NavLink>
                 </li>
                 <li>
@@ -249,6 +238,38 @@ function Submenu() {
                 </li>
                 <li>
                     <NavLink className="flex justify-end">خرید تجهیزات خانه هوشمند</NavLink>
+                </li>
+            </ul>
+
+
+            <ul className='submenu submenu-one' data-information="simcard-services">
+                <li type="back">
+                    <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
+                </li>
+                <li data-information="charging-and-payment-methods">
+                    <NavLink className="flex justify-end">روش های شارژ و پرداخت</NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">اینترنت پر سرعت</NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">محصولات و خدمات دیجیتال</NavLink>
+                </li>
+            </ul>
+
+
+            <ul className='submenu submenu-one' data-information="charging-and-payment-methods">
+                <li type="back">
+                    <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">روش های شارژ سیمکارت</NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">روش های پرداخت قبض سیمکارت</NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">روش های خرید</NavLink>
                 </li>
             </ul>
         </div>

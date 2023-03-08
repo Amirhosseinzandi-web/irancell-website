@@ -1,16 +1,16 @@
-@media screen and (max-width: 638px) {
+@media (max-width: 638px) {
 }
 /* end small mobile */
 
-@media screen and (min-width: 639px) {
+@media (min-width: 639px) {
 }
 /* end big mobile */
 
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
 }
 /* end tablet */
 
-@media screen and (min-width: 1023px) {
+@media (min-width: 1023px) {
   .nav-left-icons li,
   .nav-left-icons i {
     font-size: 13px;
@@ -29,7 +29,7 @@
 
 /* end desktop */
 
-@media screen and (min-width: 1279px) {
+@media (min-width: 1279px) {
 }
 
 /* end big */
