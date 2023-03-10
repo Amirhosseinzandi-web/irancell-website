@@ -233,7 +233,7 @@ function Submenu() {
                 <li data-information="simcard-services">
                     <NavLink className="flex justify-end">خدمات سیم کارت</NavLink>
                 </li>
-                <li>
+                <li data-information="rond-numbers">
                     <NavLink className="flex justify-end">باشگاه مشتریان شماره های رند</NavLink>
                 </li>
                 <li>
@@ -271,6 +271,16 @@ function Submenu() {
                 <li>
                     <NavLink className="flex justify-end">روش های خرید</NavLink>
                 </li>
+            </ul>
+
+            <ul className='submenu submenu-one' data-information="rond-numbers">
+                <li type="back">
+                    <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
+                </li>
+                <li>
+                    <NavLink className="flex justify-end">شماره های رند</NavLink>
+                </li>
+                
             </ul>
         </div>
     )

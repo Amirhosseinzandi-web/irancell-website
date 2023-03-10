@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Logo from "../../img/logo.png"
 import { MyContext } from './Context'
 import DesktopMenu from './DesktopMenu'
@@ -23,20 +23,21 @@ function NavRight() {
       const temp = arr.reduce((total,value)=>total+value)
       setMenuHeight(temp)
     }
-    
-    // *****************
-
-
-   
-
-
-
-
-
-
-    // **************
   }
 
+
+  useEffect(()=>{
+    if(menuHamburger){
+      setTimeout(()=>{
+        document.querySelector(".slider-container").style.marginTop = "-4px"
+      },20)
+      
+    }else{
+      setTimeout(()=>{
+        document.querySelector(".slider-container").style.marginTop = "0px"
+      },20)
+    }
+  },[menuHamburger])
 
   return (
     <div className='nav-right bg-yellow w-full lg:w-[85%] p-3 flex items-center'>

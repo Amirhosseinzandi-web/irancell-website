@@ -25,6 +25,34 @@
 .account:hover .account-desktop{
     display: block !important;
 }
+.banner-one-information p,
+.banner-three-information p,
+.banner-four-information p,
+.banner-five-information p:nth-of-type(1){
+    font-size: 28px;
+}
+.banner-two-information{
+  width: 298px;
+}
+.banner-two-information p{
+    font-size: 28px;
+    line-height: 50px;
+}
+
+.banner-five-information p{
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.banner-one-information button,
+.banner-two-information button,
+.banner-three-information button,
+.banner-four-information button,
+.banner-five-information button{
+  width: 136px;
+  height: 40px;
+  font-size: 14px;
+}
 }
 
 /* end desktop */
