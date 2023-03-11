@@ -28,7 +28,9 @@
 .banner-one-information p,
 .banner-three-information p,
 .banner-four-information p,
-.banner-five-information p:nth-of-type(1){
+.banner-five-information p:nth-of-type(1),
+.banner-six-information p,
+.banner-seven-information p{
     font-size: 28px;
 }
 .banner-two-information{
@@ -43,15 +45,25 @@
   font-size: 20px;
   line-height: 35px;
 }
+.banner-seven-information p:nth-of-type(2){
+  font-size: 20px;
+}
 
 .banner-one-information button,
 .banner-two-information button,
 .banner-three-information button,
 .banner-four-information button,
-.banner-five-information button{
+.banner-five-information button,
+.banner-six-information button,
+.banner-seven-information button{
   width: 136px;
   height: 40px;
   font-size: 14px;
+}
+.wave{
+  bottom: -1px;
+  width: 100%;
+  height: 81px;
 }
 }
 

@@ -202,6 +202,9 @@ a{
     display: none;
 }
 /* ********************** */
+.slider-container{
+    position: relative;
+}
 .swiper-slide{
     position: relative;
 }
@@ -227,9 +230,15 @@ a{
 }
 .swiper-pagination{
     z-index: 20;
+    top: 10px !important;
+    left: 10px !important;
+    height: fit-content;
+    width: fit-content !important;
 }
 .swiper-pagination span{
    border: 1px solid gray;
+   width: 12px;
+   height: 12px;
 }
 .swiper-button-prev ,
 .swiper-button-next{
@@ -250,7 +259,9 @@ a{
 .banner-two-information,
 .banner-three-information,
 .banner-four-information,
-.banner-five-information{
+.banner-five-information,
+.banner-six-information,
+.banner-seven-information{
     position: absolute;
     right: 12%;
     top: 50%;
@@ -272,7 +283,9 @@ a{
 .banner-two-information p,
 .banner-three-information p,
 .banner-four-information p,
-.banner-five-information p{
+.banner-five-information p,
+.banner-six-information p,
+.banner-seven-information p{
     text-align: center;
     font-weight: 900;
     font-size: 11px;
@@ -289,19 +302,26 @@ a{
     font-size: 15px;
     color: black;
 }
-.banner-three-information p{
+.banner-seven-information p:nth-of-type(2){
+    font-size: 8px;
+}
+.banner-three-information p,
+.banner-six-information p ,
+.banner-seven-information p {
     color: black;
 }
 .banner-one-information p:nth-of-type(2){
     font-weight: 500;
-    margin-top: 15px;
+    /* margin-top: 15px; */
 }
 
 .banner-one-information button,
 .banner-two-information button,
 .banner-three-information button,
 .banner-four-information button,
-.banner-five-information button{
+.banner-five-information button,
+.banner-six-information button,
+.banner-seven-information button{
    background-color: #FFCC00;
    width: 100px;
    height: 27px;
@@ -312,13 +332,21 @@ a{
    -ms-border-radius: 50px;
    -o-border-radius: 50px;
    font-size: 12px;
-   margin-top: 15px;
+   /* margin-top: 15px; */
    display: flex;
    align-items: center;
    justify-content: space-evenly;
 }
 .banner-two-information button,
 .banner-three-information button,
-.banner-five-information button{
+.banner-five-information button,
+.banner-seven-information button{
    background-color: white;
+}
+.wave{
+    position: absolute;
+    z-index: 20;
+    bottom: -1px;
+    width: 100%;
+    height: 20px;
 }
