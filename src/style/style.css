@@ -367,7 +367,6 @@ a {
   position: relative;
   z-index: 30;
   margin-top: -14px;
-  /* background: #000; */
 }
 .news-container > section > div {
   box-shadow: 0px 4px 12px 0 rgba(0, 0, 0, 0.16);
@@ -425,7 +424,6 @@ a {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-
 .latests-slider .swiper {
   width: 100%;
   padding-top: 50px;
@@ -455,7 +453,6 @@ a {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
   z-index: 5;
 }
-
 .latests-slider .swiper-slide img {
   width: 100%;
   height: 100%;
@@ -471,3 +468,157 @@ a {
   padding: 18px 13px;
   font-size: 17px;
 }
+/* ************************************************** */
+.application-tabs-items section{
+  width: 96px;
+  height: 48px;
+  transition: 0.2s ease;
+  position: relative;
+  z-index: 50;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  overflow: hidden;
+}
+.application-tabs-items section:hover{
+  height: 100px;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  background-color: #504f4f;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+.active-app-items{
+  height: 100px !important;
+  transform: scale(1.1) !important;
+  -webkit-transform: scale(1.1) !important;
+  -moz-transform: scale(1.1) !important;
+  -ms-transform: scale(1.1) !important;
+  -o-transform: scale(1.1) !important;
+  background-color: #504f4f;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-top: 25px;
+}
+.application-tabs-items section>div{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.application-tabs-items-wrapper{
+  height: 96px;
+  background-color: #252525;
+}
+.application-tabs-items div>p{
+ opacity: 0;
+ height: 0;
+ color: #b7baba;
+ font-weight: 800;
+ line-height: 20px;
+ font-size: 14px;
+ text-align: center;
+}
+.application-tabs-items section:hover p{
+  opacity: 1;
+  height: fit-content;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.ssp{
+  opacity: 1 !important;
+  height: fit-content !important;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+.application-tabs-items div>figure{
+  user-select: none;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.application-tabs-items div>figure>img{
+  width: 100%;
+  height: 100%;
+}
+.nav-items-1:hover figure>img{
+  content: url("https://irancell.ir/wp-content/uploads/2023/01/My-Irancell-FA-1.svg");
+}
+.nav-items-2:hover figure>img{
+  content: url("https://irancell.ir/wp-content/uploads/2022/03/Lenz-Active.svg");
+}
+.nav-items-3:hover figure>img{
+  content: url("https://irancell.ir/wp-content/uploads/2022/03/DanaPlus-Active.svg");
+}
+.nav-items-4:hover figure>img{
+  content: url("https://irancell.ir/wp-content/uploads/2022/08/JibJet-FA-color.svg");
+}
+.nav-items-5:hover figure>img{
+  content: url("https://irancell.ir/wp-content/uploads/2022/03/Pishvaz-Active.svg");
+}
+.nav-items-6:hover figure>img{
+  content: url("https://irancell.ir/wp-content/uploads/2022/03/Charkhoneh-Active.svg");
+}
+.nav-items-7:hover figure>img{
+  content: url("https://irancell.ir/wp-content/uploads/2022/11/Colorful-2.svg");
+}
+.nav-items-8:hover figure>img{
+  content: url("https://irancell.ir/wp-content/uploads/2022/12/Academy-logo-011.svg");
+}
+.right-to-left {
+  animation: anime1 1s alternate forwards;
+  -webkit-animation: anime1 1s alternate forwards;
+}
+@keyframes anime1{
+  from{opacity: 0; left: 100%;}
+  to{opacity: 1; left: 0px;}
+}
+.left-to-right {
+  animation: anime2 1s alternate forwards;
+  -webkit-animation: anime2 1s alternate forwards;
+}
+@keyframes anime2{
+  from{opacity: 0; left: -100%;}
+  to{opacity: 1; left: 0px;}
+}
+.pointer-none{
+  pointer-events: none;
+}
+.first-comein-slider{
+  left: 0 !important;
+  opacity: 1 !important;
+}
+/* ****************************************************************** */
+.application-tabs-slider{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.493);
+  position: relative;
+  overflow: hidden;
+}
+.application-tabs-slider>div{
+  width: 100%;
+  height: 80%;
+  background-color: rgba(224, 33, 33, 0.493);
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
