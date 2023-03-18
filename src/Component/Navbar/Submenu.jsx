@@ -34,8 +34,8 @@ function Submenu() {
                     }
                     _ul.classList.remove("come-in")
                     if (_ul.getAttribute("style") === "left: 0px;") {
-                        document.querySelectorAll(".submenu-container ul").forEach((ali) => {
-                            ali.classList.remove("come-in")
+                        document.querySelectorAll(".submenu-container ul").forEach((item) => {
+                            item.classList.remove("come-in")
                         })
                         _ul.classList.add("come-in")
                     }
