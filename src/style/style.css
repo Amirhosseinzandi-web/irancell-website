@@ -350,7 +350,7 @@ a {
 .banner-seven-information button {
   background-color: white;
 }
-.wave {
+.wave  , .wave1{
   position: absolute;
   z-index: 20;
   bottom: -1px;
@@ -443,14 +443,18 @@ a {
   position: relative;
   user-select: none;
 }
-.latests-slider .swiper-slide::after{
+.latests-slider .swiper-slide::after {
   position: absolute;
   content: "";
   bottom: 0;
   left: 0;
   width: 100%;
   height: 85%;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1)
+  );
   z-index: 5;
 }
 .latests-slider .swiper-slide img {
@@ -458,7 +462,7 @@ a {
   height: 100%;
   object-fit: cover;
 }
-.latests-slider .swiper-slide figcaption{
+.latests-slider .swiper-slide figcaption {
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -469,7 +473,7 @@ a {
   font-size: 17px;
 }
 /* ************************************************** */
-.application-tabs-items section{
+.application-tabs-items section {
   width: 96px;
   height: 48px;
   transition: 0.2s ease;
@@ -482,7 +486,7 @@ a {
   -o-transition: 0.2s ease;
   overflow: hidden;
 }
-.application-tabs-items section:hover{
+.application-tabs-items section:hover {
   height: 100px;
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -493,7 +497,7 @@ a {
   border-radius: 10px;
   margin-top: 25px;
 }
-.active-app-items{
+.active-app-items {
   height: 100px !important;
   transform: scale(1.1) !important;
   -webkit-transform: scale(1.1) !important;
@@ -508,27 +512,27 @@ a {
   -o-border-radius: 10px;
   margin-top: 25px;
 }
-.application-tabs-items section>div{
+.application-tabs-items section > div {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-.application-tabs-items-wrapper{
+.application-tabs-items-wrapper {
   height: 96px;
   background-color: #252525;
 }
-.application-tabs-items div>p{
- opacity: 0;
- height: 0;
- color: #b7baba;
- font-weight: 800;
- line-height: 20px;
- font-size: 14px;
- text-align: center;
+.application-tabs-items div > p {
+  opacity: 0;
+  height: 0;
+  color: #b7baba;
+  font-weight: 800;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: center;
 }
-.application-tabs-items section:hover p{
+.application-tabs-items section:hover p {
   opacity: 1;
   height: fit-content;
   transition: 0.3s ease;
@@ -537,7 +541,7 @@ a {
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
 }
-.ssp{
+.ssp {
   opacity: 1 !important;
   height: fit-content !important;
   transition: 0.3s ease;
@@ -546,7 +550,7 @@ a {
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
 }
-.application-tabs-items div>figure{
+.application-tabs-items div > figure {
   user-select: none;
   width: 48px;
   height: 48px;
@@ -554,71 +558,144 @@ a {
   justify-content: center;
   align-items: center;
 }
-.application-tabs-items div>figure>img{
+.application-tabs-items div > figure > img {
   width: 100%;
   height: 100%;
 }
-.nav-items-1:hover figure>img{
+.nav-items-1:hover figure > img {
   content: url("https://irancell.ir/wp-content/uploads/2023/01/My-Irancell-FA-1.svg");
 }
-.nav-items-2:hover figure>img{
+.nav-items-2:hover figure > img {
   content: url("https://irancell.ir/wp-content/uploads/2022/03/Lenz-Active.svg");
 }
-.nav-items-3:hover figure>img{
+.nav-items-3:hover figure > img {
   content: url("https://irancell.ir/wp-content/uploads/2022/03/DanaPlus-Active.svg");
 }
-.nav-items-4:hover figure>img{
+.nav-items-4:hover figure > img {
   content: url("https://irancell.ir/wp-content/uploads/2022/08/JibJet-FA-color.svg");
 }
-.nav-items-5:hover figure>img{
+.nav-items-5:hover figure > img {
   content: url("https://irancell.ir/wp-content/uploads/2022/03/Pishvaz-Active.svg");
 }
-.nav-items-6:hover figure>img{
+.nav-items-6:hover figure > img {
   content: url("https://irancell.ir/wp-content/uploads/2022/03/Charkhoneh-Active.svg");
 }
-.nav-items-7:hover figure>img{
+.nav-items-7:hover figure > img {
   content: url("https://irancell.ir/wp-content/uploads/2022/11/Colorful-2.svg");
 }
-.nav-items-8:hover figure>img{
+.nav-items-8:hover figure > img {
   content: url("https://irancell.ir/wp-content/uploads/2022/12/Academy-logo-011.svg");
+}
+/* ****************************************************************** */
+.application-tabs-slider {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.application-tabs-slider > div {
+  width: 100%;
+  overflow: hidden;
+  display: none;
 }
 .right-to-left {
   animation: anime1 1s alternate forwards;
   -webkit-animation: anime1 1s alternate forwards;
+  display: block !important;
 }
-@keyframes anime1{
-  from{opacity: 0; left: 100%;}
-  to{opacity: 1; left: 0px;}
+@keyframes anime1 {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
 }
 .left-to-right {
   animation: anime2 1s alternate forwards;
   -webkit-animation: anime2 1s alternate forwards;
+  display: block !important;
 }
-@keyframes anime2{
-  from{opacity: 0; left: -100%;}
-  to{opacity: 1; left: 0px;}
+@keyframes anime2 {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
 }
-.pointer-none{
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+}
+.pointer-none {
   pointer-events: none;
 }
-.first-comein-slider{
-  left: 0 !important;
-  opacity: 1 !important;
+.first-comein-slider {
+ transform: translateX(0) !important;
+ -webkit-transform: translateX(0) !important;
+ -moz-transform: translateX(0) !important;
+ -ms-transform: translateX(0) !important;
+ -o-transform: translateX(0) !important;
+ opacity: 1 !important;
+ display: block !important;
 }
-/* ****************************************************************** */
-.application-tabs-slider{
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(128, 128, 128, 0.493);
-  position: relative;
-  overflow: hidden;
+.application-tabs-slider #irancell,
+.application-tabs-slider #learning{
+  background-color: #7f7f7f;
 }
-.application-tabs-slider>div{
-  width: 100%;
-  height: 80%;
-  background-color: rgba(224, 33, 33, 0.493);
-  position: absolute;
-  top: 0;
-  opacity: 0;
+.application-tabs-slider h3{
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
 }
-
+.application-tabs-slider p{
+  font-size: 16px;
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+.application-tabs-slider span{
+  font-size: 19px;
+  color: #ffcc00;
+  font-weight: 600;
+}
+.application-tabs-slider button{
+  border-radius: 50px;
+  padding: 10px;
+}
+/* ************************** */
+.application-tabs-slider #lenz{
+  background-color: #DD3333;
+}
+.application-tabs-slider #dana-plus{
+  background-color: #1DD8B0;
+}
+.application-tabs-slider #jib-jet{
+  background-color: #121006;
+}
+.application-tabs-slider #pishvaz-music{
+  background-color: #2FABCC;
+}
+.application-tabs-slider #charkhooneh{
+  background-color: #2D2E83;
+}
+.application-tabs-slider #kids-teenager{
+  background-color: #D1C0A9;
+}

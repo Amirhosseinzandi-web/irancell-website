@@ -88,6 +88,16 @@
 .news-container>section>div{
   padding: 20px;
 }
+/* ************************** */
+.application-tabs-slider h3{
+  font-size: 28px;
+}
+.application-tabs-slider p{
+  font-size: 20px;
+}
+.application-tabs-slider button{
+  font-weight: 500;
+}
 }
 
 /* end desktop */
