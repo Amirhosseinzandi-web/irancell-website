@@ -9,10 +9,10 @@ import 'swiper/css/bundle';
 function IrancellNews() {
     return (
         <section className='news'>
-            <div>
+            <div className='md:w-[90%] md:mx-auto 2xl:container'>
                 <div className='2xl:container 2xl:mx-auto news-container'>
 
-                    <section className='flex flex-wrap justify-center md:justify-between'>
+                    <section className='flex flex-wrap justify-between'>
 
                         <div className='w-[45%]  md:w-[23%] mx-3 md:mx-0 border flex flex-row-reverse items-center'>
                             <div className='flex justify-center items-center'><figure><img src="https://irancell.ir/wp-content/uploads/2022/03/internet-packages.svg" alt="" /></figure></div>
@@ -51,7 +51,7 @@ function IrancellNews() {
 
                 <div className="latests mt-10">
 
-                    <div className='2xl:container 2xl:mx-auto'>
+                    <div>
                         <div className='latests-info flex flex-row-reverse justify-between'>
                             <section><h1 className='fz-18'>تازه ترین ها در ایرانسل</h1></section>
                             <section><p className='self-yellow font-extrabold flex items-center'><i className='bi bi-chevron-left inline-flex mx-1'></i>مشاهده اخبار</p></section>
@@ -62,7 +62,7 @@ function IrancellNews() {
 
 
                 <div className="latests-slider">
-                    <div className='h-full 2xl:container 2xl:mx-auto'>
+                    <div className='h-full'>
                         <section className='mx-auto'>
                             <Swiper
                                 effect={"coverflow"}
@@ -101,7 +101,7 @@ function IrancellNews() {
                     </div>
                 </div>
 
-                <div className='2xl:container 2xl:mx-auto'>
+                <div>
                     <div className='latests-info flex flex-row-reverse justify-between'>
                         <section><h1 className='fz-18'>محصولات دیجیتال</h1></section>
                         <section><p className='self-yellow font-extrabold flex items-center'><i className='bi bi-chevron-left inline-flex mx-1'></i>همه محصولات</p></section>

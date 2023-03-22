@@ -57,7 +57,7 @@ function ApplicatinonTabs() {
             <div>
 
                 <div className='application-tabs-items-wrapper flex justify-center'>
-                    <div className='application-tabs-items 2xl:container 2xl:mx-auto w-[90%] flex flex-row-reverse justify-evenly items-center'>
+                    <div className='application-tabs-items w-[93%] 2xl:container md:w-[90%] mx-auto flex flex-row-reverse justify-between items-center'>
 
                         <section className='nav-items-1 active-app-items'>
                             <div className='pointer-none' data-num="1" data-info="my-irancell" onClick={AppTabs}>
@@ -77,7 +77,7 @@ function ApplicatinonTabs() {
                             </div>
                         </section>
 
-                        <section className='nav-items-3 hidden sm:block'>
+                        <section className='nav-items-3'>
                             <div data-num="3" data-info="dana-plus" onClick={AppTabs}>
                                 <figure><img src="https://irancell.ir/wp-content/uploads/2022/03/DanaPlus.svg" alt="" /></figure>
                                 <p>دانا پلاس</p>
@@ -86,7 +86,7 @@ function ApplicatinonTabs() {
                             </div>
                         </section>
 
-                        <section className='nav-items-4 hidden md:block'>
+                        <section className='nav-items-4'>
                             <div data-num="4" data-info="jib-jet" onClick={AppTabs}>
                                 <figure><img src="https://irancell.ir/wp-content/uploads/2022/08/JIBJET-FA.svg" alt="" /></figure>
                                 <p>جیب جت</p>
@@ -95,7 +95,7 @@ function ApplicatinonTabs() {
                             </div>
                         </section>
 
-                        <section className='nav-items-5 hidden lg:block'>
+                        <section className='nav-items-5'>
                             <div data-num="5" data-info="pishvaz-music" onClick={AppTabs}>
                                 <figure><img src="https://irancell.ir/wp-content/uploads/2022/03/Pishvaz.svg" alt="" /></figure>
                                 <p>آهنگ پیشواز</p>
@@ -104,7 +104,7 @@ function ApplicatinonTabs() {
                             </div>
                         </section>
 
-                        <section className='nav-items-6 hidden lg:block'>
+                        <section className='nav-items-6'>
                             <div data-num="6" data-info="charkhooneh" onClick={AppTabs}>
                                 <figure><img src="https://irancell.ir/wp-content/uploads/2022/03/Charkhoneh.svg" alt="" /></figure>
                                 <p>چارخونه</p>
@@ -113,7 +113,7 @@ function ApplicatinonTabs() {
                             </div>
                         </section>
 
-                        <section className='nav-items-7 hidden lg:block'>
+                        <section className='nav-items-7'>
                             <div data-num="7" data-info="kids-teenager" onClick={AppTabs}>
                                 <figure><img src="https://irancell.ir/wp-content/uploads/2022/11/Colorful-1-1.svg" alt="" /></figure>
                                 <p>کودک و نوجوان</p>
@@ -137,12 +137,12 @@ function ApplicatinonTabs() {
                 <div className='application-tabs-slider'>
 
                     <div className='first-comein-slider' id='irancell' data-info="my-irancell">
-                        <section className='flex 2xl:container 2xl:mx-auto'>
+                        <section className='flex 2xl:container md:w-[90%] mx-auto'>
                             <div className='hidden md:block w-[40%] overflow-hidden'>
                                 <figure className='w-[100%] mt-[-15%]'><img className='w-full h-full' src="https://irancell.ir/wp-content/uploads/2023/01/MG-Home.png" alt="" /></figure>
                             </div>
 
-                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:pr-10 md:items-end'>
+                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:items-end'>
                                 <h3 className='text-center'>!سوپراپلیکیشنی با بیشترین قابلیت‌ها</h3>
                                 <p className='pt-7 text-center md:text-right'>مدیریت حساب، پرداخت قبض، سفارش بسته</p>
                                 <span className='py-4 flex items-center'>راهنمای صوتی<i className="bi bi-soundwave inline-flex mx-1"></i></span>
@@ -156,12 +156,12 @@ function ApplicatinonTabs() {
                     </div>
 
                     <div data-info="lenz" id='lenz'>
-                        <section className='flex 2xl:container 2xl:mx-auto'>
+                        <section className='flex 2xl:container md:w-[90%] mx-auto'>
                             <div className='hidden md:block w-[40%] overflow-hidden'>
                                 <figure className='w-[100%] mt-[-15%]'><img className='w-full h-full' src="https://irancell.ir/wp-content/uploads/2022/04/Lenz-1.png" alt="" /></figure>
                             </div>
 
-                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:pr-10 md:items-end'>
+                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:items-end'>
                                 <h3 className='text-center'>!دیدنی‌ترین برنامه‌های پخش زنده از دریچه لنز</h3>
                                 <p className='py-7 text-center md:text-right'>پخش زنده رقابت‌های ورزشی، مسابقات فوتبال، کنسرت‌های موسیقی</p>
                                 <div className='flex flex-col w-full md:flex-row md:justify-end'>
@@ -172,12 +172,12 @@ function ApplicatinonTabs() {
                     </div>
 
                     <div data-info="jib-jet" id='jib-jet'>
-                    <section className='flex 2xl:container 2xl:mx-auto'>
+                    <section className='flex 2xl:container md:w-[90%] mx-auto'>
                             <div className='hidden md:block w-[40%] overflow-hidden'>
                                 <figure className='w-[100%] mt-[-15%]'><img className='w-full h-full' src="	https://irancell.ir/wp-content/uploads/2022/04/Digital-Wallet-1.png" alt="" /></figure>
                             </div>
 
-                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:pr-10 md:items-end'>
+                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:items-end'>
                                 <h3 className='text-center'>!جیب‌جت، کیف پول دیجیتال ایرانسل</h3>
                                 <p className='py-7 text-center md:text-right'>پرداخت آسان برای دریافت انبوهی از خدمات در تمامی اپلیکیشن‌ها، فقط با یک کلیک</p>
                                 <div className='flex flex-col w-full md:flex-row md:justify-end'>
@@ -188,12 +188,12 @@ function ApplicatinonTabs() {
                     </div>
 
                     <div data-info="dana-plus" id='dana-plus'>
-                    <section className='flex 2xl:container 2xl:mx-auto'>
+                    <section className='flex 2xl:container md:w-[90%] mx-auto'>
                             <div className='hidden md:block w-[40%] overflow-hidden'>
                                 <figure className='w-[100%] mt-[-15%]'><img className='w-full h-full' src="https://irancell.ir/wp-content/uploads/2022/04/DanaPlus-1.png" alt="" /></figure>
                             </div>
 
-                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:pr-10 md:items-end'>
+                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:items-end'>
                                 <h3 className='text-center'>!تجربه نوین تبادل آنلاین دانش</h3>
                                 <p className='py-7 text-center md:text-right'>پلتفرمی جهت برگزاری کلاس‌های آنلاین، جلسات کاری و وبینار</p>
                                 <div className='flex flex-col w-full md:flex-row md:justify-end'>
@@ -204,12 +204,12 @@ function ApplicatinonTabs() {
                     </div>
 
                     <div data-info="pishvaz-music" id='pishvaz-music'>
-                    <section className='flex 2xl:container 2xl:mx-auto'>
+                    <section className='flex 2xl:container md:w-[90%] mx-auto'>
                             <div className='hidden md:block w-[40%] overflow-hidden'>
                                 <figure className='w-[100%] mt-[-15%]'><img className='w-full h-full' src="	https://irancell.ir/wp-content/uploads/2022/04/Dana-1-1-1.png" alt="" /></figure>
                             </div>
 
-                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:pr-10 md:items-end'>
+                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:items-end'>
                                 <h3 className='text-center'>!تبدیل کردن لحظات انتظار به خوشایندترین زمان</h3>
                                 <p className='py-7 text-center md:text-right'>گنجینه‌ای بی‌همتا از ترانه‌ها، نواها، آوازها و آهنگ‌های پیشواز</p>
                                 <div className='flex flex-col w-full md:flex-row md:justify-end'>
@@ -219,12 +219,12 @@ function ApplicatinonTabs() {
                         </section>
                     </div>
                     <div data-info="charkhooneh" id='charkhooneh'>
-                    <section className='flex 2xl:container 2xl:mx-auto'>
+                    <section className='flex 2xl:container md:w-[90%] mx-auto'>
                             <div className='hidden md:block w-[40%] overflow-hidden'>
                                 <figure className='w-[100%] mt-[-15%]'><img className='w-full h-full' src="	https://irancell.ir/wp-content/uploads/2022/04/Charkhoneh-1.png" alt="" /></figure>
                             </div>
 
-                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:pr-10 md:items-end'>
+                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:items-end'>
                                 <h3 className='text-center'>!فرصت گشت و گذار در بازار جامع محتوای دیجیتال</h3>
                                 <p className='py-7 text-center md:text-right'>دسترسی به دنیایی از فیلم، کلیپ، سریال، موسیقی، سرگرمی و کتاب</p>
                                 <div className='flex flex-col w-full md:flex-row md:justify-end'>
@@ -235,12 +235,12 @@ function ApplicatinonTabs() {
                         </section>
                     </div>
                     <div data-info="kids-teenager" id='kids-teenager'>
-                    <section className='flex 2xl:container 2xl:mx-auto'>
+                    <section className='flex 2xl:container md:w-[90%] mx-auto'>
                             <div className='hidden md:block w-[40%] overflow-hidden'>
                                 <figure className='w-[100%] mt-[-15%]'><img className='w-full h-full' src="https://irancell.ir/wp-content/uploads/2022/04/Kids-Service-1.png" alt="" /></figure>
                             </div>
 
-                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:pr-10 md:items-end'>
+                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:items-end'>
                                 <h3 className='text-center'>!اینترنت ایمن برای کودکان</h3>
                                 <p className='py-7 text-center md:text-right'>دسترسی به محتواهای دیجیتالی جذاب و سرگرم کننده برای کودکان با خیالی راحت</p>
                                 <div className='flex flex-col w-full md:flex-row md:justify-end'>
@@ -250,12 +250,12 @@ function ApplicatinonTabs() {
                         </section>
                     </div>
                     <div data-info="learning" id='learning'>
-                    <section className='flex 2xl:container 2xl:mx-auto'>
+                    <section className='flex 2xl:container md:w-[90%] mx-auto'>
                             <div className='hidden md:block w-[40%] overflow-hidden'>
                                 <figure className='w-[100%] mt-[-15%]'><img className='w-full h-full' src="https://irancell.ir/wp-content/uploads/2022/12/Accademi_Banner_fa.png" alt="" /></figure>
                             </div>
 
-                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:pr-10 md:items-end'>
+                            <div className='w-[90%] mx-auto flex flex-col items-center py-[13%] md:w-[60%] md:mx-0 md:items-end'>
                                 <h3 className='text-center'>!جریان پویای یادگیری</h3>
                                 <p className='py-7 text-center md:text-right'>دوره‌های آموزشی مدیریت پروژه حرفه‌ای، رایانش ابری، تحول دیجیتال</p>
                                 <div className='flex flex-col w-full md:flex-row md:justify-end'>
