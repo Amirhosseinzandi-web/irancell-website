@@ -6,16 +6,23 @@
   .news-container p{
     font-size: 16px;
 } 
-.latests-info h1{
+.latests-info h1,
+.shopping .shopping-top h1{
   font-size: 26px;
 }
-.latests-info p{
+.latests-info p,
+.shopping .shopping-top p{
   font-size: 18px;
 }
 /* **************** */
 .application-tabs-items section {
   width: 96px;
   margin-left: 15px;
+}
+/* ******************* */
+.accordion .swiper {
+  width: 430px;
+  height: 430px;
 }
 }
 /* end big mobile */
