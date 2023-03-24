@@ -125,7 +125,16 @@
 /* end desktop */
 
 @media (min-width: 1279px) {
-
+  .shopping-desktop-wrapper .shopping-desktop-left .items{
+    width: 274px;
+    min-height: 400px;
+  }
+  .shopping-desktop-wrapper .shopping-desktop-left .items h3{
+    font-size: 18px;
+  }
+  .shopping-desktop-wrapper .shopping-desktop-right p{
+    font-size: 23px;
+  }
 }
 
 /* end big */

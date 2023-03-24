@@ -8,17 +8,25 @@ function Shopping() {
 
 
     useEffect(() => {
-        const _height = document.querySelector(".accordion-1 section").scrollHeight + 50;
+        const _height = document.querySelector(".accordion-1 section").scrollHeight+50;
         document.querySelector(".accordion-1 section").style.height = `${_height}px`
         document.querySelector(".accordion-1").classList.add("active")
-        document.querySelector(".accordion-1 i").style.transform = `rotateX(180deg)`
+        document.querySelector(".accordion-1 i").style.transform = `rotateX(180deg)`;
+        document.querySelector(".accordion-1 section").addEventListener("click" , (e)=>{
+            e.stopPropagation()
+        })
     }, [])
 
+    
 
     const accordionHandler = (e) => {
         e.stopPropagation()
         const current = e.currentTarget;
-        const _height = current.querySelector("section.slider-wrapper").scrollHeight + 50;
+        const _height = current.querySelector("section.slider-wrapper").scrollHeight+50;
+
+        current.querySelector("section.slider-wrapper").addEventListener("click" , (e)=>{
+            e.stopPropagation()
+        })
 
         if (!e.target.closest(".accordion .slider-wrapper")) {
             current.classList.toggle("active")
@@ -44,8 +52,7 @@ function Shopping() {
     }
 
 
-
-
+    
 
     return (
         <section className='shopping mt-9 px-3 mx-auto sm:w-[90%] lg:mt-[11%]'>
