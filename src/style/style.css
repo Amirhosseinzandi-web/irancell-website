@@ -254,7 +254,9 @@ a {
 .slider-container .swiper-button-prev,
 .slider-container .swiper-button-next,
 .accordion .swiper-button-prev,
-.accordion .swiper-button-next  {
+.accordion .swiper-button-next,
+.irancell-social-media-wrapper .irancell-social-media-bottom .swiper-button-next,
+.irancell-social-media-wrapper .irancell-social-media-bottom .swiper-button-prev {
   color: rgba(255, 255, 255, 0.418);
   background-color: rgba(0, 0, 0, 0.452);
   border-radius: 50%;
@@ -273,9 +275,13 @@ a {
 
 .slider-container .swiper-button-prev::after,
 .slider-container .swiper-button-next::after,
-.accordion .swiper-button-prev::after, .accordion .swiper-button-next::after {
+.accordion .swiper-button-prev::after, .accordion .swiper-button-next::after,
+.accordion .swiper-button-next::after,
+.irancell-social-media-wrapper .irancell-social-media-bottom .swiper-button-prev::after,
+.irancell-social-media-wrapper .irancell-social-media-bottom .swiper-button-next::after {
   font-size: 16px;
 }
+
 /* ***************** */
 .banner-one-information,
 .banner-two-information,
@@ -370,7 +376,7 @@ a {
   z-index: 20;
   bottom: -1px;
   width: 100%;
-  height: 20px;
+  height: 30px;
 }
 /* ***************************************** */
 .news {
@@ -546,6 +552,7 @@ a {
   font-size: 10px;
   text-align: center;
   padding: 0 1px;
+  white-space: break-spaces;
 }
 .application-tabs-items section:hover p {
   opacity: 1;
@@ -759,7 +766,7 @@ a {
   -o-transition: 0.4s ease;
 }
 .accordion .swiper {
-  width: 370px;
+  width: 360px;
   height: 340px;
   padding: 0px;
 }
@@ -821,6 +828,15 @@ a {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
   padding: 10px;
+}
+.irancell-social-media-wrapper .irancell-social-media-top button{
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  padding: 15px 23px;
+  font-size: 19px;
 }
 /* *************************************************** */
 .shopping-desktop-wrapper .shopping-desktop-right{
@@ -899,4 +915,112 @@ a {
 }
 .shopping-desktop-wrapper .shopping-desktop-right>div:nth-of-type(1) p{
   color: black;
+}
+/* **********************irancell social media section****************************************** */
+.irancell-social-media-container{
+  width: 100%;
+  /* height: 100vh; */
+  background-color: #F2F2F2;
+  position: relative;
+}
+.wave2{
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: -30px;
+  z-index: 20;
+}
+.irancell-social-media-wrapper .irancell-social-media-top figure{
+  width: 150px;
+  height: 150px;
+}
+.irancell-social-media-wrapper .irancell-social-media-top figure>img{
+  width: 100%;
+  height: 100%;
+}
+.irancell-social-media-wrapper .irancell-social-media-top h3{
+  color: #4C4C4C;
+  font-weight: 600;
+}
+.irancell-social-media-wrapper .irancell-social-media-top p{
+  color: #504f4f;
+  font-weight: 300;
+  font-size: 19px;
+}
+/* ********** */
+.irancell-social-media-wrapper .irancell-social-media-bottom .swiper {
+  max-width: 516px;
+  max-height: 516px;
+}
+.irancell-social-media-wrapper .irancell-social-media-bottom .swiper figure {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  overflow: hidden;
+}
+
+.irancell-social-media-wrapper .irancell-social-media-bottom .swiper figure>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ************************** */
+.irancell-social-media-bottom>div:nth-of-type(2){
+  max-width: 1024px;
+  grid-template-columns: 50% 50%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+  gap: 10px;
+}
+.irancell-social-media-wrapper .irancell-social-media-bottom .irancell-social-media-bottom-left{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 10px;
+}
+.irancell-social-media-wrapper .irancell-social-media-bottom .irancell-social-media-bottom-left>div{
+  overflow: hidden;
+}
+.irancell-social-media-bottom>div:nth-of-type(2) div{
+  position: relative;
+}
+.irancell-social-media-bottom>div:nth-of-type(2) div div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.671);
+  padding: 5px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.irancell-social-media-bottom>div:nth-of-type(2) div p{
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  padding: 0px 10px;
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+.irancell-social-media-bottom>div:nth-of-type(2) div:hover div{
+  opacity: 1;
+  visibility: visible;
 }
