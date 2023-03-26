@@ -8,23 +8,23 @@ function Shopping() {
 
 
     useEffect(() => {
-        const _height = document.querySelector(".accordion-1 section").scrollHeight+50;
+        const _height = document.querySelector(".accordion-1 section").scrollHeight + 50;
         document.querySelector(".accordion-1 section").style.height = `${_height}px`
         document.querySelector(".accordion-1").classList.add("active")
         document.querySelector(".accordion-1 i").style.transform = `rotateX(180deg)`;
-        document.querySelector(".accordion-1 section").addEventListener("click" , (e)=>{
+        document.querySelector(".accordion-1 section").addEventListener("click", (e) => {
             e.stopPropagation()
         })
     }, [])
 
-    
+
 
     const accordionHandler = (e) => {
         e.stopPropagation()
         const current = e.currentTarget;
-        const _height = current.querySelector("section.slider-wrapper").scrollHeight+50;
+        const _height = current.querySelector("section.slider-wrapper").scrollHeight + 50;
 
-        current.querySelector("section.slider-wrapper").addEventListener("click" , (e)=>{
+        current.querySelector("section.slider-wrapper").addEventListener("click", (e) => {
             e.stopPropagation()
         })
 
@@ -52,7 +52,7 @@ function Shopping() {
     }
 
 
-    
+
 
     return (
         <section className='shopping mt-9 px-3 mx-auto sm:w-[90%] lg:mt-[11%]'>
@@ -87,8 +87,7 @@ function Shopping() {
                                 effect={"flip"}
                                 grabCursor={true}
                                 pagination={true}
-                                navigation={true}
-                                modules={[EffectFlip, Pagination, Navigation]}
+                                modules={[EffectFlip, Pagination]}
                                 className="mySwiper"
                             >
 
@@ -96,7 +95,7 @@ function Shopping() {
                                     <section className='slider-items p-3 border'>
                                         <div className='flex flex-col items-center border-b-2'>
                                             <figure><img src="https://irancell.ir/wp-content/uploads/2022/03/4g.svg" alt="" /></figure>
-                                            <h2 className='my-3 font-extrabold'><span className='pr-1'>4g</span>بسته اینترنت همراه</h2>
+                                            <h2 className='my-3 font-extrabold rtl'>بسته اینترنت همراه 4g</h2>
                                         </div>
 
                                         <div className='my-3'>
@@ -117,12 +116,12 @@ function Shopping() {
                                     <section className='slider-items p-3 border'>
                                         <div className='flex flex-col items-center border-b-2'>
                                             <figure><img src="https://irancell.ir/wp-content/uploads/2022/03/td-lte.svg" alt="" /></figure>
-                                            <h2 className='my-3 font-extrabold'><span className='pr-1'>TD-LTE</span>بسته اینترنت همراه</h2>
+                                            <h2 className='my-3 font-extrabold rtl'>بسته اینترنت همراه TD-LTE</h2>
                                         </div>
 
                                         <div className='my-3'>
                                             <ul>
-                                                <li className='flex flex-row-reverse'>بسته‌های ویژه برای مودم‌های اینترنت ثابت<span className='pr-1'>TD-LTE</span></li>
+                                                <li className='rtl'>بسته‌های ویژه برای مودم‌های اینترنت ثابت TD-LTE</li>
 
                                                 <li className='flex flex-row-reverse my-2'> مناسب برای مصرف خانگی و اداری</li>
                                             </ul>
@@ -172,8 +171,7 @@ function Shopping() {
                                 effect={"flip"}
                                 grabCursor={true}
                                 pagination={true}
-                                navigation={true}
-                                modules={[EffectFlip, Pagination, Navigation]}
+                                modules={[EffectFlip, Pagination]}
                                 className="mySwiper"
                             >
                                 <SwiperSlide>
@@ -253,13 +251,12 @@ function Shopping() {
                             <div className='self-yellow flex items-center'><i className='bi bi-chevron-down inline-flex'></i></div>
                         </div>
                         <section className='slider-wrapper'>
-                        <h3 className='text-right my-7'>!با تنوعی از مودم‌ها و دستگاه‌های هوشمند؛ از زندگی در جهان ارتباطات لذت ببرید</h3>
+                            <h3 className='text-right my-7'>!با تنوعی از مودم‌ها و دستگاه‌های هوشمند؛ از زندگی در جهان ارتباطات لذت ببرید</h3>
                             <Swiper
                                 effect={"flip"}
                                 grabCursor={true}
                                 pagination={true}
-                                navigation={true}
-                                modules={[EffectFlip, Pagination, Navigation]}
+                                modules={[EffectFlip, Pagination]}
                                 className="mySwiper"
                             >
                                 <SwiperSlide>
@@ -292,7 +289,7 @@ function Shopping() {
 
                                         <div className='my-3'>
                                             <ul>
-                                            <li className='flex flex-row-reverse my-2'>همراه با سیم کارت<span className='px-1'>TDLTE</span>و سیم کارت <span className='px-1'>FD</span>ایرانسل</li>
+                                                <li className='flex flex-row-reverse my-2'>همراه با سیم کارت<span className='px-1'>TDLTE</span>و سیم کارت <span className='px-1'>FD</span>ایرانسل</li>
 
                                                 <li className='flex flex-row-reverse my-2'>مودم نسل<span>4.5</span>هوآوی</li>
                                             </ul>
@@ -307,9 +304,9 @@ function Shopping() {
 
                 </section>
                 {/* end of accordion mobile */}
-                 {/* start of shopping desktop  */}
-                 <ShoppingDesktop/>
-                 {/* end of shopping desktop  */}
+                {/* start of shopping desktop  */}
+                <ShoppingDesktop />
+                {/* end of shopping desktop  */}
             </div>
         </section>
     )
