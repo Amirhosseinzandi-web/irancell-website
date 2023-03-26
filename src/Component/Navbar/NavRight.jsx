@@ -26,18 +26,18 @@ function NavRight() {
   }
 
 
-  useEffect(()=>{
-    if(menuHamburger){
-      setTimeout(()=>{
-        document.querySelector(".slider-container").style.marginTop = "-4px"
-      },20)
+  // useEffect(()=>{
+  //   if(menuHamburger){
+  //     setTimeout(()=>{
+  //       document.querySelector(".slider-container").style.marginTop = "-4px"
+  //     },20)
       
-    }else{
-      setTimeout(()=>{
-        document.querySelector(".slider-container").style.marginTop = "0px"
-      },20)
-    }
-  },[menuHamburger])
+  //   }else{
+  //     setTimeout(()=>{
+  //       document.querySelector(".slider-container").style.marginTop = "0px"
+  //     },20)
+  //   }
+  // },[menuHamburger])
 
   return (
     <div className='nav-right bg-yellow w-full lg:w-[85%] p-3 flex items-center'>

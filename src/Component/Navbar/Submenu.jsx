@@ -10,7 +10,7 @@ function Submenu() {
     const { menuHeight, setMenuHeight } = useContext(MyContext)
 
     const openHeight = {
-        height: menuHeight + "px"
+        height: (menuHeight - 4) + "px"
     }
 
     const closeHeight = {
