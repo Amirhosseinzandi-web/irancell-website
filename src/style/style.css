@@ -179,8 +179,8 @@ a {
   display: none;
   z-index: 1000;
 }
-.desktop-submenu-items > ul > li:not(last-child),
-.desktop-submenu-items-one > ul > li:not(last-child) {
+.desktop-submenu-items > ul > li:not(:last-child),
+.desktop-submenu-items-one > ul > li:not(:last-child) {
   border-bottom: 1px solid white;
   min-width: 250px;
 }
