@@ -3,13 +3,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/css/bundle';
 import { useState } from 'react';
-import BannerOne from "../../../img/slider/banner-1.jpg"
-import BannerTwo from "../../../img/slider/banner-2.jpg"
-import BannerThree from "../../../img/slider/banner-3.jpg"
-import BannerFour from "../../../img/slider/banner-4.jpg"
-import BannerFive from "../../../img/slider/banner-5.jpg"
-import BannerSix from "../../../img/slider/banner-6.jpg"
-import BannerSeven from "../../../img/slider/banner-7.jpg"
+import BannerOne from "../../../img/top slider/banner-1.jpg"
+import BannerTwo from "../../../img/top slider/banner-2.jpg"
+import BannerThree from "../../../img/top slider/banner-3.jpg"
+import BannerFour from "../../../img/top slider/banner-4.jpg"
+import BannerFive from "../../../img/top slider/banner-5.jpg"
+import BannerSix from "../../../img/top slider/banner-6.jpg"
+import BannerSeven from "../../../img/top slider/banner-7.jpg"
 
 function SliderPage() {
     const [state, setState] = useState("")

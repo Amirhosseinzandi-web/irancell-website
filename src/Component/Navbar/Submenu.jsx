@@ -231,7 +231,7 @@ function Submenu() {
                     <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
                 </li>
                 <li data-information="simcard-services">
-                    <NavLink className="flex justify-end">خدمات سیم کارت</NavLink>
+                    <NavLink className="flex justify-between items-center"><i className="bi bi-arrow-left inline-flex"></i>خدمات سیم کارت</NavLink>
                 </li>
                 <li data-information="rond-numbers">
                     <NavLink className="flex justify-end">باشگاه مشتریان شماره های رند</NavLink>
@@ -247,7 +247,7 @@ function Submenu() {
                     <NavLink className="flex justify-between items-center">بازگشت<i className="bi bi-arrow-right inline-flex"></i></NavLink>
                 </li>
                 <li data-information="charging-and-payment-methods">
-                    <NavLink className="flex justify-end">روش های شارژ و پرداخت</NavLink>
+                    <NavLink className="flex justify-between items-center"><i className="bi bi-arrow-left inline-flex"></i>روش های شارژ و پرداخت</NavLink>
                 </li>
                 <li>
                     <NavLink className="flex justify-end">اینترنت پر سرعت</NavLink>
