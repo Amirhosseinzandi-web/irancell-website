@@ -328,11 +328,11 @@ a {
 }
 .banner-five-information p {
   color: black;
-  font-weight: 400;
-}
-.banner-five-information p:nth-of-type(1) {
   font-weight: 900;
 }
+/* .banner-five-information p:nth-of-type(1) {
+  font-weight: 900;
+} */
 .banner-two-information p {
   font-size: 15px;
   color: black;
@@ -367,10 +367,10 @@ a {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
   font-size: 12px;
-  /* margin-top: 15px; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  font-weight: 800;
 }
 .banner-two-information button,
 .banner-three-information button,

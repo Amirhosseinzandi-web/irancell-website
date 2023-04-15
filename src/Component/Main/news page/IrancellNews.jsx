@@ -15,33 +15,33 @@ function IrancellNews() {
                     <section className='flex flex-wrap justify-between'>
 
                         <div className='w-[45%]  md:w-[23%] border flex flex-row-reverse items-center'>
-                            <div className='flex justify-center items-center'><figure><img src="https://irancell.ir/wp-content/uploads/2022/03/internet-packages.svg" alt="" /></figure></div>
-                            <div className='flex items-center'><p>بسته های اینترنت</p></div>
+                            <div className='flex justify-center items-center w-[25%]'><figure><img src="https://irancell.ir/wp-content/uploads/2022/03/internet-packages.svg" alt="" /></figure></div>
+                            <div className='flex items-center w-[75%] justify-end text-right'><p>بسته های اینترنت</p></div>
                         </div>
 
                         <div className='w-[45%]  md:w-[23%] border flex flex-row-reverse items-center'>
-                            <div className='flex justify-center items-center'><figure><img src="https://irancell.ir/wp-content/uploads/2022/03/myirancell.svg" alt="" /></figure></div>
-                            <div className='flex items-center'><p>ایرانسل من</p></div>
+                            <div className='flex justify-center items-center w-[25%]'><figure><img src="https://irancell.ir/wp-content/uploads/2022/03/myirancell.svg" alt="" /></figure></div>
+                            <div className='flex items-center w-[75%] justify-end text-right'><p>ایرانسل من</p></div>
                         </div>
 
                         <div className='w-[45%]  md:w-[23%] border flex flex-row-reverse items-center mt-2 md:mt-0'>
-                            <div className='flex justify-center items-center'><figure><img src="https://irancell.ir/wp-content/uploads/2022/03/support.svg" alt="" /></figure></div>
-                            <div className='flex items-center'><p>تماس با ما</p></div>
+                            <div className='flex justify-center items-center w-[25%]'><figure><img src="https://irancell.ir/wp-content/uploads/2022/03/support.svg" alt="" /></figure></div>
+                            <div className='flex items-center w-[75%] justify-end text-right'><p>تماس با ما</p></div>
                         </div>
 
                         <div className='w-[45%]  md:w-[23%] border flex flex-row-reverse items-center mt-2 md:mt-0'>
-                            <div className='flex justify-center items-center'><figure><img src="	https://irancell.ir/wp-content/uploads/2022/03/simcard.svg" alt="" /></figure></div>
-                            <div className='flex items-center'><p>خرید سیم کارت</p></div>
+                            <div className='flex justify-center items-center w-[25%]'><figure><img src="	https://irancell.ir/wp-content/uploads/2022/03/simcard.svg" alt="" /></figure></div>
+                            <div className='flex items-center w-[75%] justify-end text-right'><p>خرید سیم کارت</p></div>
                         </div>
 
                         <div className='w-[45%] border flex flex-row-reverse items-center mt-2 md:hidden'>
-                            <div className='flex justify-center items-center'><figure><img src="https://irancell.ir/wp-content/uploads/2023/01/charge-billing.svg" alt="" /></figure></div>
-                            <div className='flex items-center'><p>پرداخت قبض سیم کارت دایمی</p></div>
+                            <div className='flex justify-center items-center w-[25%]'><figure><img src="https://irancell.ir/wp-content/uploads/2023/01/charge-billing.svg" alt="" /></figure></div>
+                            <div className='flex items-center w-[75%] justify-end text-right'><p>پرداخت قبض سیم کارت دایمی</p></div>
                         </div>
 
                         <div className='w-[45%]  border flex flex-row-reverse items-center mt-2 md:hidden'>
-                            <div className='flex justify-center items-center'><figure><img src="https://irancell.ir/wp-content/uploads/2022/03/USSD@3x.png" alt="" /></figure></div>
-                            <div className='flex items-center'><p>کد های دستوری ایرانسل</p></div>
+                            <div className='flex justify-center items-center w-[25%]'><figure><img src="https://irancell.ir/wp-content/uploads/2022/03/USSD@3x.png" alt="" /></figure></div>
+                            <div className='flex items-center w-[75%] justify-end text-right'><p>کد های دستوری ایرانسل</p></div>
                         </div>
 
                     </section>

@@ -189,7 +189,7 @@ function Submenu() {
                     <NavLink>بسته های ترکیبی</NavLink>
                 </li>
                 <li className='flex justify-end'>
-                    <NavLink>بسته بوم و بوم+</NavLink>
+                    <NavLink className="rtl">بسته بوم و بوم+</NavLink>
                 </li>
             </ul>
 

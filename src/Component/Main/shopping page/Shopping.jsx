@@ -55,7 +55,7 @@ function Shopping() {
 
 
     return (
-        <section className='shopping mt-9 px-3 mx-auto sm:w-[90%] lg:mt-[11%]'>
+        <section className='shopping mt-9 px-3 mx-auto sm:w-[90%] lg:mt-[8%]'>
             <div className='2xl:container mx-auto'>
 
                 <div className="flex flex-row-reverse justify-between shopping-top">
