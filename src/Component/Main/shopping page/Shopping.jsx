@@ -268,11 +268,11 @@ function Shopping() {
 
                                         <div className='my-3'>
                                             <ul>
-                                                <li className='flex flex-row-reverse'>مودم قابل حمل</li>
+                                                <li>مودم قابل حمل</li>
 
-                                                <li className='flex flex-row-reverse my-2'>شبکه های قابل پشتیبانی</li>
+                                                <li className='my-2'>شبکه های قابل پشتیبانی</li>
 
-                                                <li className='flex flex-row-reverse'>قابلیت اتصال همزمان تا 10 کاربر از طریق<span className='pr-1'>Wi-Fi</span></li>
+                                                <li className='rtl'>قابلیت اتصال همزمان تا 10 کاربر از طریق Wi-Fi</li>
                                             </ul>
                                             <button className="w-full bg-yellow flex items-center justify-between mt-3 text-black font-bold"><i className="bi bi-chevron-left inline-flex text-white"></i>خرید سیم کارت</button>
                                         </div>
@@ -284,14 +284,14 @@ function Shopping() {
                                     <section className='slider-items p-3 border'>
                                         <div className='flex flex-col items-center border-b-2'>
                                             <figure><img src="https://irancell.ir/wp-content/uploads/2022/03/postpaid-simcard.svg" alt="" /></figure>
-                                            <h2 className='my-3 font-extrabold flex'><span className='pr-1'>هوآوی TD-LTE 4.5 G</span>مودم جیبی</h2>
+                                            <h2 className='my-3 font-extrabold rtl'>مودم جیبی TD-LTE 4.5G هوآوی</h2>
                                         </div>
 
                                         <div className='my-3'>
                                             <ul>
-                                                <li className='flex flex-row-reverse my-2'>همراه با سیم کارت<span className='px-1'>TDLTE</span>و سیم کارت <span className='px-1'>FD</span>ایرانسل</li>
+                                                <li className='rtl my-2'>همراه با سیم کارت TDLTE و سیم کارت FD ایرانسل</li>
 
-                                                <li className='flex flex-row-reverse my-2'>مودم نسل<span>4.5</span>هوآوی</li>
+                                                <li className='rtl my-2'>مودم نسل 4.5 هوآوی</li>
                                             </ul>
                                             <button className="w-full bg-yellow flex items-center justify-between mt-3 text-black font-bold"><i className="bi bi-chevron-left inline-flex text-white"></i>خرید سیم کارت</button>
                                         </div>
